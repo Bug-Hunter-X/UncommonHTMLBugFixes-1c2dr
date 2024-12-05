@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to insert an entire <p> tag
+    document.getElementById("myDiv").innerHTML = "<p>This is a paragraph.</p>";
+    //This will cause the paragraph to be treated as text.  This is a subtle error, but can cause problems with styling and accessibility.
+  </script>
+</body>
+</html>
